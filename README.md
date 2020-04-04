@@ -1,3 +1,3 @@
 # Вадим 
 Testing my works!
-[Challenge от Эда](https://vadym23.github.io/ChallengebyEdd/index.html "Челендж от Эда") - верстаю сайт (применял градиент, background-attachment и inline-block)
+[Сайт строительной компании](https://vadym23.github.io/src/index.html "Строительная компания") - верстаю сайт (настроил GULP, подключил препроцесор LESS, подключил bootstrap CDN ,подключил шрифты(ProximaNova) ,применял градиент, background-attachment и inline-block)
