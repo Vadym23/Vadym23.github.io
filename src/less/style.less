@@ -46,6 +46,16 @@ body {
     .reg();
 }
 
+a:hover {
+    text-decoration: none;
+}
+
+button, input, a {
+    &:focus {
+        outline: none;
+    }
+}
+
 .button {
     padding: 1rem 3rem;
     border-radius: 8px;
@@ -54,6 +64,11 @@ body {
     color: @light;
     text-transform: uppercase;
     border: none;
+    transition: all 0.2s;
+    &:hover {
+        cursor: pointer;
+        background-color: darken(@btn-color, 5%);
+    }
 }
 
 // .logo {
@@ -89,6 +104,7 @@ body {
     span {
         display: inline-block;
         padding: 1.7rem 3rem;
+        margin-bottom: 3rem;
         color: @light;
         background-color: @logo;
         text-align: center;
@@ -173,5 +189,35 @@ body {
     height: 7rem;
     line-height: 7rem;
     color: @text;
+    }
+}
+
+@media (max-width: 991px) {
+    .header {
+        height: 11rem;
+    }
+    .main {
+        background-position: top right;
+    }
+    .phone-block {
+        text-align: center;
+    }
+    .main-content {
+        margin-top: 3rem;
+    }
+    .main-title {
+        text-align: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .main {
+        background-position: top center;
+    }
+    .header {
+        text-align: center;
+    }
+    .wrap-block {
+        text-align: center;
     }
 }
