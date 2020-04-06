@@ -79,12 +79,18 @@ button, input, a {
 .section {
     padding: 10rem 0;
 }
-
+.section-header {
+    margin: 2rem 0 7rem;
+    .bold();
+    font-size: 3.6rem;
+    text-align: center;
+}
 /* Main */
 .main {
     padding: 3rem 5rem;
     background: #fff url(../img/main-bg.png) center center no-repeat;
     background-size: cover;
+    margin-bottom: 7rem;
     &-content {
         margin-top: 10rem;
         /* Main title */
@@ -190,6 +196,55 @@ button, input, a {
     line-height: 7rem;
     color: @text;
     }
+}
+
+/* Section features */
+.features {
+    &-block {
+        text-align: center;
+        margin-bottom: 20rem;
+        h3 {
+            .bold();
+            font-size: 2rem;
+            margin-bottom: 3rem;
+        }
+        p {
+            display: inline-block;
+            width: 80%;
+            font-size: 1.4rem;
+        }
+    }
+    &-img {
+        height: 8rem;
+        margin-bottom: 3rem;
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}
+.slick-active {
+    outline: none;
+}
+.arrow {
+    top: 35%;
+    transform: scaleY(-50%);
+    position: absolute;
+    z-index: 99;
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    
+}
+.prev {
+    background: url(../img/ico/left.png) center no-repeat;  
+    left: 0;
+    background-size: 70%;
+}
+.next {
+    background: url(../img/ico/right.png) center no-repeat;  
+    right: 0;
+    background-size: 70%;
 }
 
 @media (max-width: 991px) {

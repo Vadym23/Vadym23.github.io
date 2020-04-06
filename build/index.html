@@ -74,5 +74,102 @@
      </div>
     </div>
   </main>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="container">
+      <h2 class="section-header">
+        Преимущества работы с нами
+      </h2>
+      <div class="features-slider">
+        <div class="features-block">
+          <div class="features-img">
+            <picture>
+              <source srcset="img/ico/info.svg" type="image/">
+              <img src="img/ico/info.png" alt="">
+            </picture>
+            <h3>100% информации</h3>
+            <p>Консультация по выбору квартиры, с учетом ваших предпочтений и рекомендации квалифицированного специалиста.</p>
+          </div>
+        </div>
+        <div class="features-block">
+          <div class="features-img">
+            <picture>
+              <source srcset="img/ico/paid.svg" type="image/">
+              <img src="img/ico/paid.png" alt="">
+            </picture>
+            <h3>Расчет стоимости</h3>
+            <p>На расчет стоимости желанной квартиры в рассрочку влияет размер первоначального взноса и срок рассрочки.</p>
+          </div>
+        </div>
+        <div class="features-block">
+          <div class="features-img">
+            <picture>
+              <source srcset="img/ico/armor.svg" type="image/">
+              <img src="img/ico/armor.png" alt="">
+            </picture>
+            <h3>Бронирование</h3>
+            <p>Подходящую квартиру бронируют на определенный срок</p>
+          </div>
+        </div>
+        <div class="features-block">
+          <div class="features-img">
+            <picture>
+              <source srcset="img/ico/sale.svg" type="image/">
+              <img src="img/ico/sale.png" alt="">
+            </picture>
+            <h3>Оформление сделки</h3>
+            <p>Проходит оформление сделки в отделе продаж </p>
+          </div>
+        </div> 
+      </div>
+    </div>
+  </section>
+
+  <script
+    src="https://code.jquery.com/jquery-1.12.4.min.js"
+    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+    crossorigin="anonymous">
+  </script>
+ 
+  <!-- <script 
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" 
+    crossorigin="anonymous">
+  </script> -->
+
+  <script src="./js/slick.min.js"></script>
+
+  <!-- Init slider -->
+  <script>
+    $(document).ready(function() {
+      $('.features-slider').slick({
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        responsive: [
+          {
+            breakpoint: 991,
+            settings: {
+              slidesToShow: 2,
+              prevArrow: '<button class="prev arrow"></button>',
+              nextArrow: '<button class="next arrow"></button>',
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 767,
+            settings: {
+              slidesToShow: 1,
+              prevArrow: '<button class="prev arrow"></button>',
+              nextArrow: '<button class="next arrow"></button>',
+              slidesToScroll: 1
+            }
+          }
+        ]
+      });
+    });
+  </script>
+
 </body>
 </html>

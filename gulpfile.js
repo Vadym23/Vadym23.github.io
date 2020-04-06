@@ -6,7 +6,9 @@ const less = require('gulp-less');
 const sourcemaps = require('gulp-sourcemaps');
 
 const cssFiles = [
-    './src/less/style.less'
+    './src/less/style.less',
+    './src/less/slick.less',
+    './src/less/slick-theme.less'
 ];
 
 
@@ -29,6 +31,12 @@ function styles() {
         .pipe(concat('main.css'))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('./build/css'))
+        .pipe(browserSync.stream());
+}
+
+function js() {
+    return gulp.src('./src/js/*.js')
+        .pipe(gulp.dest('./build/js'))
         .pipe(browserSync.stream());
 }
 
@@ -61,6 +69,6 @@ gulp.task('watch', watch);
 gulp.task('clean', clean);
 
 gulp.task('build', gulp.series(clean,
-        gulp.parallel(htmls, styles, imgs, fonts)
+        gulp.parallel(htmls, styles, imgs, js, fonts)
     ));
 gulp.task('dev', gulp.series('build', 'watch'));
