@@ -50,7 +50,7 @@ a:hover {
     text-decoration: none;
 }
 
-button, input, a {
+button, input, a, textarea {
     &:focus {
         outline: none;
     }
@@ -138,6 +138,7 @@ button, input, a {
             margin: 2rem 0;
             width: 100%;
             border: 1px solid @border-input;
+            border-radius: 5px;
             padding: 1.5rem;
         }
         /* Field signatures */
@@ -247,6 +248,50 @@ button, input, a {
     background-size: 70%;
 }
 
+/* Modal window */
+.popup {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    background-color: rgba(0, 0, 0, 0.5);
+    &-content {
+        position: fixed;
+        left: 50%;
+        top: 10%;
+        background: @light;
+        transform: translateX(-50%);
+        padding: 4rem 6rem;
+    }
+    &-form {
+        margin-top: 3rem;
+        padding: 0;
+    }
+    &-close {
+        position: absolute;
+        top: -1.5rem;
+        right: -2rem;
+        width: 2rem;
+        text-align: center;
+        border: none;
+        background-color: transparent;
+        font-size: 3rem;
+        color: @light;
+    }
+    &-content {
+        text-align: center;
+    }
+    &-header {
+        .bold();
+    }
+}
+
+/* Media requests */
 @media (max-width: 991px) {
     .header {
         height: 11rem;
