@@ -200,6 +200,76 @@
     </div>
   </section>
 
+  <!-- Feedback Section -->
+  <section class="feedback">
+    <div class="container">
+      <div class="section-header">
+        <h2>Отзывы</h2>
+      </div>
+      <div class="feedback-slider">
+        <div class="feedback-slider-item">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="fotorama">
+                <div class="photo-slider-item"><img src="./img/feedback/01.jpg" alt=""></div>
+                <div class="photo-slider-item"><img src="./img/feedback/02.jpg" alt=""></div>
+                <div class="photo-slider-item"><img src="./img/feedback/03.jpg" alt=""></div>
+                <div class="photo-slider-item"><img src="./img/feedback/04.jpg" alt=""></div>
+                <div class="photo-slider-item"><img src="./img/feedback/05.jpg" alt=""></div>
+                <div class="photo-slider-item"><img src="./img/feedback/06.jpg" alt=""></div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <p>Обьект: <b>г.Одесса, ул. Абордажная 404</b></p>
+              <p>Площадь: <b>357 м2</b></p>
+              <p>Срок здачи: <b>3 года</b></p>
+              <p>Стоимость: <b>750 у.е. за квадратный метр</b></p>
+            </div>
+          </div>
+        </div>
+        <div class="feedback-slider-item">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="fotorama">
+                <div class="photo-slider-item"><img src="./img/feedback/01.jpg" alt=""></div>
+                <div class="photo-slider-item"><img src="./img/feedback/02.jpg" alt=""></div>
+                <div class="photo-slider-item"><img src="./img/feedback/03.jpg" alt=""></div>
+                <div class="photo-slider-item"><img src="./img/feedback/04.jpg" alt=""></div>
+                <div class="photo-slider-item"><img src="./img/feedback/05.jpg" alt=""></div>
+                <div class="photo-slider-item"><img src="./img/feedback/06.jpg" alt=""></div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <p>Обьект: <b>г.Одесса, ул. Абордажная 404</b></p>
+              <p>Площадь: <b>357 м2</b></p>
+              <p>Срок здачи: <b>3 года</b></p>
+              <p>Стоимость: <b>750 у.е. за квадратный метр</b></p>
+            </div>
+          </div>
+        </div>
+        <div class="feedback-slider-item">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="fotorama">
+                <div class="photo-slider-item"><img src="./img/feedback/01.jpg" alt=""></div>
+                <div class="photo-slider-item"><img src="./img/feedback/02.jpg" alt=""></div>
+                <div class="photo-slider-item"><img src="./img/feedback/03.jpg" alt=""></div>
+                <div class="photo-slider-item"><img src="./img/feedback/04.jpg" alt=""></div>
+                <div class="photo-slider-item"><img src="./img/feedback/05.jpg" alt=""></div>
+                <div class="photo-slider-item"><img src="./img/feedback/06.jpg" alt=""></div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <p>Обьект: <b>г.Одесса, ул. Абордажная 404</b></p>
+              <p>Площадь: <b>357 м2</b></p>
+              <p>Срок здачи: <b>3 года</b></p>
+              <p>Стоимость: <b>750 у.е. за квадратный метр</b></p>
+            </div>
+          </div>
+        </div> 
+      </div>
+    </div>
+  </section>
 
   <!-- Modal window -->
   <div class="popup">
@@ -226,59 +296,7 @@
     </div>
   </div>
 
-  <!-- Scripts -->
-  <script
-    src="https://code.jquery.com/jquery-1.12.4.min.js"
-    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
-    crossorigin="anonymous">
-  </script>
- 
-  <!-- <script 
-    src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
-    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" 
-    crossorigin="anonymous">
-  </script> -->
-
-  <script src="./js/slick.min.js"></script>
-
-  <!-- Init slider -->
-  <script>
-    $(document).ready(function() {
-      $('.popup-btn').on('click', function(event) {
-        event.preventDefault();
-        $('.popup').fadeIn();
-      });
-      $('.popup-close').on('click', function(event) {
-        event.preventDefault();
-        $('.popup').fadeOut();
-      });
-      $('.features-slider').slick({
-        infinite: true,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        responsive: [
-          {
-            breakpoint: 991,
-            settings: {
-              slidesToShow: 2,
-              prevArrow: '<button class="prev arrow"></button>',
-              nextArrow: '<button class="next arrow"></button>',
-              slidesToScroll: 2
-            }
-          },
-          {
-            breakpoint: 767,
-            settings: {
-              slidesToShow: 1,
-              prevArrow: '<button class="prev arrow"></button>',
-              nextArrow: '<button class="next arrow"></button>',
-              slidesToScroll: 1
-            }
-          }
-        ]
-      });
-    });
-  </script>
+  <script src="./js/main.js"></script>
 
 </body>
 </html>

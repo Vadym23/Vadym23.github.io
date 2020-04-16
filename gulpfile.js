@@ -6,11 +6,18 @@ const less = require('gulp-less');
 const sourcemaps = require('gulp-sourcemaps');
 
 const cssFiles = [
-    './src/less/style.less',
-    './src/less/slick.less',
-    './src/less/slick-theme.less'
+    './node_modules/slick-carousel/slick/slick.less',
+    './node_modules/slick-carousel/slick/slick-theme.less',
+    './node_modules/fotorama/fotorama.css',
+    './src/less/style.less'
 ];
 
+const jsFiles = [
+    './node_modules/jquery/dist/jquery.min.js',
+    './node_modules/slick-carousel/slick/slick.js',
+    './node_modules/fotorama/fotorama.js',
+    './src/js/scripts.js'
+];
 
 function htmls() {
     return gulp.src('./src/*.html')
@@ -35,7 +42,8 @@ function styles() {
 }
 
 function js() {
-    return gulp.src('./src/js/*.js')
+    return gulp.src(jsFiles)
+        .pipe(concat('main.js'))
         .pipe(gulp.dest('./build/js'))
         .pipe(browserSync.stream());
 }
