@@ -314,11 +314,64 @@ button, input, a, textarea {
 
 /* Feedback section */
 .feedback {
+    &-prev-btn {
+        left: -4rem;
+    }
+    &-next-btn {
+        right: -4rem;
+    }
+    &-text {
+        position: relative;
+        padding: 1rem;
+        margin-top: 2rem;
+        border: 2px solid @logo;
+        font-style: italic;
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: -2rem;
+            left: 4rem;
+            width: 2rem;
+            height: 2rem;
+            background-color: @light;
+            border: 2px solid @logo;
+            border-bottom: none;
+            border-top-right-radius: 10rem;
+        }
+    }
     &-slider {
         padding: 5rem 6rem;
         background-color: @light;
         box-shadow: 6px 10px 18px 0px rgba(0, 0, 0, 0.11);
+        .media {
+            margin-top: 3rem;
+            font-size: 1.4rem;
+            h4 {
+                .bold();
+            }
+            img {
+                height: 70px;
+            }
+        }
+        p {
+            font-size: 1.6rem;
+        }
+        &-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4rem;
+            height: 4rem;
+            background-color: @logo;
+            border: none;
+            cursor: pointer;
+            img {
+                width: 50%;
+            }
+        }
     }
+    
     p {
         font-size: 15px;
     }

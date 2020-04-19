@@ -3033,7 +3033,8 @@ $(document).ready(function() {
     });
     /* Slider feedback */
     $('.feedback-slider').slick({
-        
+        prevArrow: '<button type="button" class="feedback-slider-btn feedback-prev-btn"><img src="../img/ico/left.png" alt="" /></button>',
+        nextArrow: '<button type="button" class="feedback-slider-btn feedback-next-btn"><img src="../img/ico/right.png" alt="" /></button>'
     });
     /* Slider features */
     $('.features-slider').slick({
