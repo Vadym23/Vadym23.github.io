@@ -71,9 +71,33 @@ button, input, a, textarea {
     }
 }
 
-// .logo {
-//     height: 70px;
-// }
+/* Form decor*/
+.form {
+    &-input {
+        display: block;
+        margin: 2rem 0;
+        width: 100%;
+        border: 1px solid @border-input;
+        border-radius: 5px;
+        padding: 1.5rem;
+    }
+    /* Field signatures */
+    label {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        padding: 0.5rem;
+        font-size: 1.3rem;
+        background-color: @light;
+    }
+    /* Main button to submit */
+    &-btn {
+        display: block;
+        width: 100%;
+        height: 5.5rem;
+        font-size: 1.6rem;
+    }
+}
 
 /* Typography */
 .section {
@@ -142,30 +166,7 @@ button, input, a, textarea {
                 font-size: 2rem;
             }
         }
-        &-input {
-            display: block;
-            margin: 2rem 0;
-            width: 100%;
-            border: 1px solid @border-input;
-            border-radius: 5px;
-            padding: 1.5rem;
-        }
-        /* Field signatures */
-        label {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%) translateY(-50%);
-            padding: 0.5rem;
-            font-size: 1.3rem;
-            background-color: @light;
-        }
-        /* Main button to submit */
-        &-btn {
-            display: block;
-            width: 100%;
-            height: 5.5rem;
-            font-size: 1.6rem;
-        }
+       
         /* Signature under the button */
         small {
             display: block;
@@ -314,6 +315,7 @@ button, input, a, textarea {
 
 /* Feedback section */
 .feedback {
+    position: relative;
     &-prev-btn {
         left: -4rem;
     }
@@ -371,10 +373,31 @@ button, input, a, textarea {
             }
         }
     }
-    
-    p {
-        font-size: 15px;
+    &-form {
+        margin-top: 6rem;
+        padding: 4rem 10rem;
+        background-color: @light;
+        text-align: center;
+        h3 {
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            .bold();
+        }
+        label {
+            transform: translate(-50%, 7px);
+        }
     }
+    &-btn {
+        max-width: 30rem;
+        margin: auto;
+    }
+}
+
+.feedback-img {
+    position: absolute;
+    bottom: 0;
+    left: 0; 
+    max-width: 30rem;
 }
 
 /* Modal window */
@@ -421,6 +444,17 @@ button, input, a, textarea {
 }
 
 /* Media requests */
+@media (max-width: 1199px) {
+    .feedback {
+        &-form {
+            padding: 2rem 5rem;
+        }
+        .fotorama {
+            margin-bottom: 3rem;
+        }
+    }
+}
+
 @media (max-width: 991px) {
     .header {
         height: 11rem;
@@ -454,16 +488,44 @@ button, input, a, textarea {
     .section-header_light {
         margin-bottom: 0;
     }
+    .feedback {
+        &-form {
+            label {
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+    .feedback-img {
+        display: none;
+    }
 }
 
 @media (max-width: 767px) {
     .main {
         background-position: top center;
+        h1 {
+            font-size: 2.5rem;
+        }
     }
     .header {
         text-align: center;
     }
     .wrap-block {
         text-align: center;
+    }
+    .features {
+        &-block {
+            p {
+                width: 60%;
+            }
+        }
+    }
+    .feedback {
+        &-prev-btn {
+            left: 0;
+        }
+        &-next-btn {
+            right: 0;
+        }
     }
 }
